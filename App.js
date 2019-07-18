@@ -13,7 +13,7 @@ class App extends Component {
     const topStories= 'https://hacker-news.firebaseio.com/v0/topstories.json';
     const storyUrlBase= 'https://hacker-news.firebaseio.com/v0/item/';
 
-    fetch(topStories)
+    fetch(topStories)  //fetching the data from this API can take some time so be patient.
       .then(data => data.json())
       .then(data => data.map(id => {
         const url= `${storyUrlBase}${id}.json`
